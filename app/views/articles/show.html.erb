@@ -1,7 +1,4 @@
-<div class="d-flex justify-content-between .bg-light mb-4 border-bottom align-items-center">
-  <h4><%= link_to "My articles", articles_path, class:"text-decoration-none text-secondary" %></h4>
-  <h2><%= link_to "New article", new_article_path,class: "btn btn-inverse text-secondary" %></h2>
-</div>
+<%= render partial: 'articles/nav' %>
 
 <div class="d-flex flex-column m-auto w-50">
   <h1 class="border-bottom pb-4">
