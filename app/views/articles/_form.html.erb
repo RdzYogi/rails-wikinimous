@@ -1,7 +1,10 @@
 <%= form_with model: @article do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
+  <div class="d-flex flex-column flex-wrap">
+    <%= f.label :title %>
+    <%= f.text_field :title, class:"mb-3"%>
+    <%= f.label :content %>
+    <%= f.text_field :content, class:"mb-3" %>
+    <% text = @article.id.nil? ? 'Create' : 'Update' %>
+    <%= f.submit "#{text} Article", class:"w-25"%>
+  </div>
 <% end %>
